@@ -102,14 +102,6 @@ searchInput.addEventListener('keyup', function(event) {
   }
 });
 
-const homeButton = document.querySelector('#home-button');
-homeButton.addEventListener('click', () => {
-  const searchInput = document.querySelector('#search-input');
-  searchInput.value = '';
-  handleSearch();
-});
-
-
 
   
 const columnsSlider = document.getElementById("columns-slider");
