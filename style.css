@@ -31,48 +31,60 @@ body {
 
   
   
-  header {
-    /* background-color: #eeeeee; */
-    padding-left: 30px;
-    padding-right: 30px;
-    background: linear-gradient(170deg, green, green, green, white, red, red, red);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between; 
-    border-radius: 25px;
-    box-shadow: 0px 13px 30px black;
-    border: 3px solid black;
-    /* text-align: right; */
-    /* align-items: center; */
-    /* top: 20px; */
-    /* right: 0; */
+header {
+  /* background-color: #eeeeee; */
+  padding-left: 10px;
+  padding-right: 10px;
+  background: linear-gradient(150deg, green, green, green, white, red, red, red);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+  border-radius: 25px;
+  box-shadow: 0px 13px 30px black;
+  border: 3px solid black;
+}
 
-    
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10px;
+}
+
+a {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+}
+
+#tvButton {
+  display: block;
+  font-size: 3.5rem;
+  padding: 10px;
+  margin: 0 10px;
+}
+
+
+
+  
+  
+  #tvButton:hover {
+    background-color: #408fe3;
   }
   
   
-  h1 {
-    /* font-size: 2em; */
-    margin-top: 0px;
-    font-weight: bold;
-    color: black;
-    /* font-size: 460%; */
-
+  .station.hidden {
+    display: none;
   }
+
   
-  h2 {
-    margin-top: 30px;
-    /* font-size: 2em; */
-    font-weight: bold;
-    color: black;
-    /* font-size: 460%; */
-
-  }
-
+  
+  
   h1, h2 {
-    /* margin-top: 50px; */
-    margin-bottom: 0px;
-    font-size: min(6.2vw, 82px);
+    font-size: 5vw;
+    margin: 5px;
+    font-weight: bold;
+    color: black;
   }
   
 
@@ -255,50 +267,6 @@ body {
 
 
 
-  /* #pause-icon-container {
-    
-  } */
-    
-
-    /* create 2 columns, each taking up 1 fraction of the available space */
-   /* 1150 */
-/* @media (min-width: 1050px) {
-  ul {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-  }
-  
-  .english-name {
-
-    font-size: min(2vw, 40px);
-  }
-
-  .farsi-name {
-    font-size: min(3.1vw, 65px);
-  }
-
-  .radio-item {
-    min-width: 455px;
-  }
-}
-*/
-/* @media (max-width: 1050px) {
-  .radio-item { 
-    margin-top: 20px; 
-  }
-
-  .radio-photo-div, .radio-cover, .radio-item {
-    height: 150px;
-  }
-  .radio-photo-div, .radio-cover {
-    width: 150px;
-  }
-
-} */
-
-
-
-
 /* dark mode support */
 
 @media (prefers-color-scheme: light) {
@@ -323,14 +291,10 @@ body {
   
   .radio-item.playing {
     background-color: #a9a9a9; 
-    /* box-shadow: 0 0 20px black; */
   }
 
   #play-pause-button {
-    /* border-color: white; */
-    /* box-shadow : 0 5px 20px rgba(255, 255, 255, 0); */
     background-color: #e8e8e8;
-
   }
 
 }
@@ -338,10 +302,23 @@ body {
 
 
 @media only screen and (orientation: landscape) {
+  #search-input {
+    width: 400px;
+    height: 30px;
+  }
+  .container {
+    justify-content: flex-end;
+  }
+
+  #tvButton {
+    font-size: 2rem;
+  }
+
   h1, h2 {
     margin-top: 0;
-    font-size: min(4.2vw, 82px);
+    font-size: 2.5vw;
   }
+  
   ul {
     display: grid;
     grid-template-columns: repeat(2, 1fr); 

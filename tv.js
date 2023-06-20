@@ -105,8 +105,7 @@ searchInput.addEventListener('keyup', function(event) {
 
   
 const columnsSlider = document.getElementById("columns-slider");
-const tvList = document.querySelector(".tv-list");
 
 columnsSlider.addEventListener("input", () => {
-  tvList.style.setProperty("--columns", columnsSlider.value);
+  document.documentElement.style.setProperty("--columns", columnsSlider.value);
 });
