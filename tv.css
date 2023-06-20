@@ -42,6 +42,7 @@ body {
   margin-right: 5px;
 }
 
+
 .settings-container { /* column slider*/
   display: flex;
   flex-direction: row;
@@ -69,15 +70,18 @@ body {
   /* background-color: #007bff; */
   color: #000000;
   border: none;
+
   border-radius: 5px;
   padding: 5px;
   font-size: 1rem;
   cursor: pointer;
   /* width: 70px; */
-  height: 30px;
+  height: 25px;
   text-align: center;
+  line-height: 25px;
   margin-left: 5px;
   margin-right: 0;
+
 }
 
 #search-button:hover, #home-button:hover, #radios:hover {
