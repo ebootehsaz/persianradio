@@ -67,6 +67,7 @@ fetch('https://raw.githubusercontent.com/ebootehsaz/persianradio/master/stations
 
 
     radioItem.addEventListener('click', function(event) {
+      button.classList.remove('hidden')
       try {
         let isplaying = radioList.querySelector('.radio-cover.playing');
         // console.log(isplaying);
@@ -214,9 +215,10 @@ let currplaying = null;
 // audioPlayer.poster = 'https://cdn.countryflags.com/thumbs/iran/flag-square-250.png';
 document.body.appendChild(audioPlayer);
 
-document.getElementById('play-pause-button').addEventListener('click', () => {
-
+button.addEventListener('click', () => {
+  
   if (audioPlayer.paused) {
+    
 
     audioPlayer.play();
     // update the button's text
@@ -237,4 +239,13 @@ document.getElementById('play-pause-button').addEventListener('click', () => {
 });
 
 
+button.classList.add('hidden')
 
+
+window.addEventListener('resize', function() {
+  var headerHeight = document.querySelector('header').offsetHeight;
+  document.querySelector('#settings').style.height = headerHeight + 'px';
+});
+
+// Initial setting of height on page load
+window.dispatchEvent(new Event('resize'));
